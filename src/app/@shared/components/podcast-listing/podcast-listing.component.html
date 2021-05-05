@@ -1,0 +1,14 @@
+<article class="podcast__container">
+  <h1 class="podcast__title">{{podcast.title}}</h1>
+  <ul class="podcast__summary">
+    <li class="podcast__thumbnail-image"><img src="{{podcast.thumbnail}}" alt="Thumbnail image for podcast: {{podcast.title}}"></li>
+    <li><h2 class="podcast__detail-link" (click)="viewPodcast(podcast.id)">{{podcast.publisher}}</h2></li>
+    <li>Total number of episodes: {{podcast.total_episodes}}</li>
+    <li>
+      <a href="https://www.apple.com/{{podcast.itunes_id}}" class="podcast__links">iTunes</a>
+      <a href="{{podcast.website}}" class="podcast__links">Website</a>
+      <a *ngIf="podcast.rss" href="{{podcast.rss}}" class="podcast__links">RSS Feed</a>
+    </li>
+    <li>{{podcast.description}}</li>
+  </ul>
+</article>

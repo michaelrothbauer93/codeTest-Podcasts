@@ -1,0 +1,33 @@
+@import '../../../../variables.scss';
+@import '../../../../mixins.scss';
+
+.podcast {
+  &__container {
+    flex-grow: 1;
+    width: 100%;
+    margin-top: $spacing;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 810px)
+    {
+      width: 810px;
+    }
+  }
+
+  &__title, &__thumbnail-image {
+    text-align: center;
+  }
+
+  &__summary {
+    list-style: none;
+  }
+
+  &__detail-link:hover {
+    cursor: pointer;
+  }
+
+  &__links {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}
